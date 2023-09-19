@@ -302,8 +302,6 @@ class TrainValDataset(Dataset):
         # check and load anns
 
         img_paths = list(img_info.keys())
-        with open('/content/log.txt','w') as f:
-            f.write('\n'.join(img_path))
         label_paths = img2label_paths(img_paths)
         assert label_paths, f"No labels found."
         label_hash = self.get_hash(label_paths)
