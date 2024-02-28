@@ -50,19 +50,5 @@ solver = dict(
     warmup_momentum=0.5,
     warmup_bias_lr=0.05
 )
-
-data_aug = dict(
-    hsv_h=0.0138,
-    hsv_s=0.664,
-    hsv_v=0.464,
-    degrees=0.373,
-    translate=0.245,
-    scale=0.898,
-    shear=0.602,
-    flipud=0.00856,
-    fliplr=0.5,
-    mosaic=1.0,
-    mixup=0.243,
-)
 training_mode = "conv_silu"
 # use normal conv to speed up training and further improve accuracy.
