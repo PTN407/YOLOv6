@@ -51,6 +51,17 @@ solver = dict(
     warmup_bias_lr=0.05
 )
 data_aug = dict(
+    hsv_h=0.0,
+    hsv_s=0.0,
+    hsv_v=0.0,
+    degrees=0.0,
+    translate=0.0,
+    scale=0.0,
+    shear=0.0,
+    flipud=0.0,
+    fliplr=0.0,
+    mosaic=0.0,
+    mixup=0.0,
 )
 
 training_mode = "conv_silu"
