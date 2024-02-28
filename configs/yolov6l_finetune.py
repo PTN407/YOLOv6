@@ -50,5 +50,8 @@ solver = dict(
     warmup_momentum=0.5,
     warmup_bias_lr=0.05
 )
+data_aug = dict(
+)
+
 training_mode = "conv_silu"
 # use normal conv to speed up training and further improve accuracy.
