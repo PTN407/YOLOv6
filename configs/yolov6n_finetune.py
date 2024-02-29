@@ -38,24 +38,12 @@ model = dict(
     )
 )
 
-solver = dict(
-    optim='SGD',
-    lr_scheduler='Cosine',
-    lr0=0.0032,
-    lrf=0.12,
-    momentum=0.843,
-    weight_decay=0.00036,
-    warmup_epochs=2.0,
-    warmup_momentum=0.5,
-    warmup_bias_lr=0.05
-)
-
 # YOLOv6l model
 model = dict(
     type='YOLOv6l',
     pretrained='weights/yolov6l.pt',
-    depth_multiple=1.0,
-    width_multiple=1.0,
+    depth_multiple=0.33,
+    width_multiple=0.25,
     backbone=dict(
         type='CSPBepBackbone',
         num_repeats=[1, 6, 12, 18, 6],
