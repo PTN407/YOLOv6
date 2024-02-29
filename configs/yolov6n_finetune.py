@@ -102,6 +102,7 @@ solver = dict(
     warmup_momentum=0.5,
     warmup_bias_lr=0.05
 )
+
 data_aug = dict(
     hsv_h=0,
     hsv_s=0.664,
