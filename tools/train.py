@@ -58,6 +58,7 @@ def get_args_parser(add_help=True):
     parser.add_argument('--specific-shape', action='store_true', help='rectangular training')
     parser.add_argument('--height', type=int, default=None, help='image height of model input')
     parser.add_argument('--width', type=int, default=None, help='image width of model input')
+    parser.add_argument('--seed', type=int, default=0, help='sht')
     return parser
 
 
@@ -100,7 +101,7 @@ def check_and_init(args):
     # check device
     device = select_device(args.device)
     # set random seed
-    set_random_seed(1+args.rank, deterministic=(args.rank == -1))
+    set_random_seed(args.seed, deterministic=(args.rank == -1))
     # save args
     if master_process:
         save_yaml(vars(args), osp.join(args.save_dir, 'args.yaml'))
