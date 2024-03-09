@@ -29,8 +29,8 @@ model = dict(
         strides=[8, 16, 32],
         atss_warmup_epoch=0,
         iou_type='giou',
-        use_dfl=False, # set to True if you want to further train with distillation
-        reg_max=0, # set to 16 if you want to further train with distillation
+        use_dfl=True, # set to True if you want to further train with distillation
+        reg_max=16, # set to 16 if you want to further train with distillation
         distill_weight={
             'class': 1.0,
             'dfl': 1.0,
@@ -51,15 +51,15 @@ solver = dict(
 )
 
 data_aug = dict(
-    hsv_h=0.0138,
+    hsv_h=0.0,
     hsv_s=0.664,
     hsv_v=0.464,
     degrees=0.373,
     translate=0.245,
     scale=0.898,
     shear=0.602,
-    flipud=0.00856,
+    flipud=0.0,
     fliplr=0.5,
-    mosaic=1.0,
+    mosaic=0.0,
     mixup=0.243,
 )
